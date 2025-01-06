@@ -13,7 +13,6 @@ import {
 	FormDescription,
 	FormField,
 	FormItem,
-	FormLabel,
 	FormMessage,
 } from "@/components/ui/form";
 import {
@@ -43,7 +42,7 @@ export function DateTimePicker24hForm() {
 		resolver: zodResolver(FormSchema),
 	});
 
-	function onSubmit(data: z.infer<typeof FormSchema>) {
+	async function onSubmit(data: z.infer<typeof FormSchema>) {
 		toast.success(
 			`Selected start date and time: ${format(data.startDate, "PPPP HH:mm")} \n Selected end date and time: ${format(data.startDate, "PPPP HH:mm")}`,
 		);
