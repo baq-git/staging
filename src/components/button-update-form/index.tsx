@@ -342,7 +342,19 @@ const UpdateGoldenHourPopover = ({
 										</FormItem>
 									)}
 								/>
-								<Button type="submit">Submit</Button>
+								<div className="flex gap-2 justify-between">
+									<Button
+										className="flex-1"
+										type="button"
+										variant="outline"
+										onClick={() => setOpen(false)}
+									>
+										Cancel
+									</Button>
+									<Button className="flex-1" type="submit">
+										Submit
+									</Button>
+								</div>
 							</form>
 						</Form>
 					</CardContent>
